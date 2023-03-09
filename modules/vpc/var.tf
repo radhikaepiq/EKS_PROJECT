@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 variable "vpc_cidr" {
   # default = "10.0.0.0/16"
   type = string
@@ -19,7 +19,7 @@ variable "Purpose" {
   description = "Purpose of the infrastructure creation"
 #  default = "EKSProject"
 }
-=======
+
 variable "vpc_cidr" {
   # default = "10.0.0.0/16"
   type = string
@@ -40,4 +40,4 @@ variable "Purpose" {
   description = "Purpose of the infrastructure creation"
 #  default = "EKSProject"
 }
->>>>>>> d0470fa (done)
+
