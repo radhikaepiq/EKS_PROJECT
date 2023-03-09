@@ -21,15 +21,15 @@ module "EKS_igw" {
   Purpose = var.Purpose
 }
 
-module "EKS_rttbl" {
-  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routetable"
-  vpc_id      = "${module.EKS_vpc.vpc_id}"
-  igw_id = "${module.EKS_igw.igw_id}"
-  cidr_block = var.cidr_block
-  NameRT  = var.NameRT
-  Owner = var.Owner
-  Purpose = var.Purpose
-  }
+# module "EKS_rttbl" {
+#   source      = "../modules/routetable"
+#   vpc_id      = "${module.EKS_vpc.vpc_id}"
+#   igw_id = "${module.EKS_igw.igw_id}"
+#   cidr_block = var.cidr_block
+#   NameRT  = var.NameRT
+#   Owner = var.Owner
+#   Purpose = var.Purpose
+#   }
 
 #   module "EKS_SCGP" {
 #   source      = "../modules/securitygrp"
@@ -59,11 +59,11 @@ module "EKS_rttbl" {
 #   Purpose  = var.Purpose
 #   }
 
-module "EKS_routeassociation" {
-  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routeassociation"
-  route_table_id = "${module.EKS_rttbl.route_table_id}"
-  subnet_id = "${module.EKS_subnets.subnet_id}" 
-}
+# module "EKS_routeassociation" {
+#   source      = "../modules/routeassociation"
+#   route_table_id = "${module.EKS_rttbl.route_table_id}"
+#   subnet_id = "${module.EKS_subnets.subnet_id}" 
+# }
 
 # output "infra"{
 #   value = [module.EKS_vpc.vpc_id,module.EKS_igw.igw_id,module.EKS_rttbl.route_table_id,module.EKS_subnets.subnet_id,module.EKS_routeassociation.routeassociation_id,module.EKS_SCGP.secgrp_id,module.EKS_Pvtsubnets.pvtsubnet_id]
