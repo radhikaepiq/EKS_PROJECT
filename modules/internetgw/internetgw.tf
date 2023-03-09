@@ -1,4 +1,4 @@
-# <<<<<<< HEAD
+
 resource "aws_internet_gateway" "EKS_igw" {
   vpc_id = "${var.vpc_id}"
    tags = {
@@ -10,7 +10,7 @@ resource "aws_internet_gateway" "EKS_igw" {
 
 /////output
 output "igw_id" { value = "${aws_internet_gateway.EKS_igw.id}" }
-=======
+
 resource "aws_internet_gateway" "EKS_igw" {
   vpc_id = "${var.vpc_id}"
    tags = {
@@ -22,4 +22,4 @@ resource "aws_internet_gateway" "EKS_igw" {
 
 /////output
 output "igw_id" { value = "${aws_internet_gateway.EKS_igw.id}" }
-# >>>>>>> d0470fa (done)
+
