@@ -1,3 +1,4 @@
+## Variables for route tables
 variable "vpc_id" { type  = string  }
 variable "igw_id" { type  = string  }
 variable "cidr_block" { type  = string  }
@@ -12,7 +13,3 @@ variable "Owner" {
 variable "Purpose" {
   type = string
 }
-
-
-
-

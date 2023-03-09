@@ -14,5 +14,5 @@ resource "aws_route_table" "EKS_Rtbl" {
 }
 /////output
 output "route_table_id" { value = "${aws_route_table.EKS_Rtbl.id}" }
-/////multiple rts
+
 
