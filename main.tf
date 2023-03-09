@@ -2,6 +2,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
+#E VPC modules
 module "EKS_vpc" {
   # source      = "../modules/vpc"
   source = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/vpc"

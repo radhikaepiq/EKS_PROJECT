@@ -6,6 +6,7 @@ resource "aws_route_table" "EKS_Rtbl" {
     gateway_id = "${var.igw_id}"
   }
 
+## Add tags
    tags = {
     Name = "${var.NameRT}"
     Purpose ="${var.Purpose}"
