@@ -60,11 +60,11 @@ module "EKS_rttbl" {
   Purpose  = var.Purpose
   }
 
-# module "EKS_routeassociation" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routeassociation"
-#   route_table_id = "${module.EKS_rttbl.route_table_id}"
-#   subnet_id = "${module.EKS_subnets.subnet_id}" 
-# }
+module "EKS_routeassociation" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routeassociation"
+  route_table_id = "${module.EKS_rttbl.route_table_id}"
+  subnet_id = "${module.EKS_subnets.subnet_id}" 
+}
 
 # # output "infra"{
 # #   value = [module.EKS_vpc.vpc_id,module.EKS_igw.igw_id,module.EKS_rttbl.route_table_id,module.EKS_subnets.subnet_id,module.EKS_routeassociation.routeassociation_id,module.EKS_SCGP.secgrp_id,module.EKS_Pvtsubnets.pvtsubnet_id]
