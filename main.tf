@@ -12,14 +12,14 @@ module "EKS_vpc" {
   Purpose = var.Purpose
 }
 
-# ## internet gateway
-# module "EKS_igw" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/internetgw"
-#   vpc_id      = "${module.EKS_vpc.vpc_id}"
-#   NameIG  = var.NameIG
-#   Owner = var.Owner
-#   Purpose = var.Purpose
-# }
+## internet gateway
+module "EKS_igw" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/internetgw"
+  vpc_id      = "${module.EKS_vpc.vpc_id}"
+  NameIG  = var.NameIG
+  Owner = var.Owner
+  Purpose = var.Purpose
+}
 
 # module "EKS_rttbl" {
 #   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routetable"

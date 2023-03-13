@@ -30,8 +30,4 @@ variable "subnets" {
       sub-2 = {
             "subId" =   "subnet-079b0539c957791e7"}
    }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2a76104a650b15ecaa1e95fa07a7852194cb7b60
