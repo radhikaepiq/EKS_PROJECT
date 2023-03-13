@@ -50,15 +50,15 @@ module "EKS_rttbl" {
   Owner  = var.Owner
   Purpose  = var.Purpose
   }
-  
-#    module "EKS_Pvtsubnets" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/pvtsubnets" 
-#   vpc_id    =  "${module.EKS_vpc.vpc_id}"
-#   pvtsubnets = var.pvtsubnets
-#   pvtsubnettag  = var.pvtsubnettag
-#   Owner  = var.Owner
-#   Purpose  = var.Purpose
-#   }
+
+   module "EKS_Pvtsubnets" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/pvtsubnets" 
+  vpc_id    =  "${module.EKS_vpc.vpc_id}"
+  pvtsubnets = var.pvtsubnets
+  pvtsubnettag  = var.pvtsubnettag
+  Owner  = var.Owner
+  Purpose  = var.Purpose
+  }
 
 # module "EKS_routeassociation" {
 #   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routeassociation"
