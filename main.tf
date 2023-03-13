@@ -42,14 +42,15 @@ module "EKS_rttbl" {
 #   secgrp_id   = "${module.EKS_SCGP.secgrp_id}"
 #   }
 
-#   module "EKS_subnets" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/subnets" 
-#   vpc_id    =  "${module.EKS_vpc.vpc_id}"
-#   subnets = var.subnets
-#   subnettag  = var.subnettag
-#   Owner  = var.Owner
-#   Purpose  = var.Purpose
-#   }
+  module "EKS_subnets" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/subnets" 
+  vpc_id    =  "${module.EKS_vpc.vpc_id}"
+  subnets = var.subnets
+  subnettag  = var.subnettag
+  Owner  = var.Owner
+  Purpose  = var.Purpose
+  }
+  
 #    module "EKS_Pvtsubnets" {
 #   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/pvtsubnets" 
 #   vpc_id    =  "${module.EKS_vpc.vpc_id}"
