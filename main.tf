@@ -31,16 +31,16 @@ module "EKS_rttbl" {
   Purpose = var.Purpose
   }
 
-#   module "EKS_SCGP" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/securitygrp"
-#   vpc_id      = "${module.EKS_vpc.vpc_id}"
-#   ingress_rules    = var.ingress_rules
-#   NameSG  = var.NameSG
-#   Owner  = var.Owner
-#   Purpose  = var.Purpose
-#   protocal = var.protocal
-#   secgrp_id   = "${module.EKS_SCGP.secgrp_id}"
-#   }
+  module "EKS_SCGP" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/securitygrp"
+  vpc_id      = "${module.EKS_vpc.vpc_id}"
+  ingress_rules    = var.ingress_rules
+  NameSG  = var.NameSG
+  Owner  = var.Owner
+  Purpose  = var.Purpose
+  protocal = var.protocal
+  secgrp_id   = "${module.EKS_SCGP.secgrp_id}"
+  }
 
   module "EKS_subnets" {
   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/subnets" 
