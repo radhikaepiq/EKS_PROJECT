@@ -21,15 +21,15 @@ module "EKS_igw" {
   Purpose = var.Purpose
 }
 
-# module "EKS_rttbl" {
-#   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routetable"
-#   vpc_id      = "${module.EKS_vpc.vpc_id}"
-#   igw_id = "${module.EKS_igw.igw_id}"
-#   cidr_block = var.cidr_block
-#   NameRT  = var.NameRT
-#   Owner = var.Owner
-#   Purpose = var.Purpose
-#   }
+module "EKS_rttbl" {
+  source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/routetable"
+  vpc_id      = "${module.EKS_vpc.vpc_id}"
+  igw_id = "${module.EKS_igw.igw_id}"
+  cidr_block = var.cidr_block
+  NameRT  = var.NameRT
+  Owner = var.Owner
+  Purpose = var.Purpose
+  }
 
 #   module "EKS_SCGP" {
 #   source      = "git::https://github.com/radhikaepiq/EKS_PROJECT.git//modules/securitygrp"
