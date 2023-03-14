@@ -15,8 +15,5 @@ resource "aws_subnet" "EKS_subnets" {
 }
 
 output "subnet_id" {
-    value = tomap({
-        for k, s in aws_subnet.EKS_subnets : k => s.id
-    })
+    value = aws_subnet.EKS_subnets.*.id 
 }
-
