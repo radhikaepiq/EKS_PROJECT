@@ -1,7 +1,7 @@
 resource "aws_subnet" "EKS_pvtsubnets" {
   for_each = var.pvtsubnets
  
-  # availability_zone_id = each.value["az2"]
+  availability_zone_id = each.value["az2"]
   cidr_block = each.value["cidr2"]
   vpc_id = "${var.vpc_id}"
   tags = {
